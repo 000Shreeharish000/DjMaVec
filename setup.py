@@ -5,7 +5,7 @@ setup(
     name="djmavec",
     version="0.1.0",
     description="Django + MariaDB vector search utilities (embeddings, field, and search mixins)",
-    author="Sbree Harish V",
+    author="Shree Harish V, Mugunthan S",
     packages=["djmavec"],
     install_requires=[
         "django",

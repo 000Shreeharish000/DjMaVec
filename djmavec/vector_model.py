@@ -1,45 +1,43 @@
-# vector_model.py
+"""Lightweight helpers that delegate to the package's embedding utilities.
 
-from sentence_transformers import SentenceTransformer
+This module avoids loading the sentence-transformers model at import time and
+delegates to `djmavec.embeddings` which handles lazy loading and the
+`DJMAVEC_FAKE_EMBEDDINGS` test mode.
+"""
+
+from __future__ import annotations
+
+from typing import Any
+
 import numpy as np
 
-# Load a small, fast embedding model locally
-MODEL_NAME = "all-MiniLM-L6-v2"
-model = SentenceTransformer(MODEL_NAME)
+from .embeddings import embed_text, embed_batch
+from .utils import cosine_similarity as _cosine_similarity
+
 
 def get_embedding(text: str) -> np.ndarray:
-    """
-    Generate a vector embedding for a given text.
-    
-    Args:
-        text (str): The input text.
-    
-    Returns:
-        np.ndarray: Embedding vector as a NumPy array.
-    """
-    embedding = model.encode(text)
-    return embedding
+    """Return an embedding for a single text using the package embedding API."""
+    return embed_text(text)
+
+
+def get_embeddings(texts: list[str]) -> np.ndarray:  # pragma: no cover - thin wrapper
+    """Return embeddings for a batch of texts."""
+    return embed_batch(texts)
+
 
 def get_similarity(vec1: np.ndarray, vec2: np.ndarray) -> float:
+    """Compute cosine similarity between two vectors.
+
+    Delegates to the normalized cosine implementation in `utils`.
     """
-    Compute cosine similarity between two vectors.
-    
-    Args:
-        vec1, vec2 (np.ndarray): Embedding vectors.
-    
-    Returns:
-        float: Cosine similarity score between -1 and 1.
-    """
-    norm1 = np.linalg.norm(vec1)
-    norm2 = np.linalg.norm(vec2)
-    if norm1 == 0 or norm2 == 0:
-        return 0.0
-    return float(np.dot(vec1, vec2) / (norm1 * norm2))
+    return _cosine_similarity(vec1, vec2)
+
 
 if __name__ == "__main__":
-    # Quick test
-    text1 = "Hello world!"
-    text2 = "Hi there!"
-    vec1 = get_embedding(text1)
-    vec2 = get_embedding(text2)
-    print("Similarity:", get_similarity(vec1, vec2))
+    # Small demo that uses fake embeddings by default so it is safe offline.
+    import os
+
+    os.environ.setdefault("DJMAVEC_FAKE_EMBEDDINGS", "1")
+    a = get_embedding("Hello world!")
+    b = get_embedding("Hi there!")
+    print("Similarity:", get_similarity(a, b))
