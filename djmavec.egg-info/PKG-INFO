@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: djmavec
+Version: 0.1.0
+Summary: Django + MariaDB vector search utilities (embeddings, field, and search mixins)
+Author: Open Source Contributors
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: django
+Requires-Dist: numpy
+Requires-Dist: sentence-transformers
+Dynamic: author
+Dynamic: classifier
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

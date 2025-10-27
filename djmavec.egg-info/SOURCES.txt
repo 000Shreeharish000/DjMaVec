@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+djmavec/__init__.py
+djmavec/embeddings.py
+djmavec/fields.py
+djmavec/search.py
+djmavec/tests.py
+djmavec/utils.py
+djmavec.egg-info/PKG-INFO
+djmavec.egg-info/SOURCES.txt
+djmavec.egg-info/dependency_links.txt
+djmavec.egg-info/requires.txt
+djmavec.egg-info/top_level.txt
