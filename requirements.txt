@@ -1,0 +1,5 @@
+numpy
+sentence-transformers
+mysql-connector-python
+Django>=3.2
+# django  # not required for this quick demo; only needed for Django integration demo
