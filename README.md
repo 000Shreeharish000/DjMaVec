@@ -97,6 +97,12 @@ Saving embeddings to MariaDB...
 Searching for: "I feel depressed"
 Match: "I am feeling sad and down today" (score=0.89)
 
+🖼️ Example: Embeddings visualization
+
+Below is a simple visualization reference of embeddings distributed in vector space:
+
+![Embeddings example](./embeddings.png)
+
 Django Integration (In Progress)
 
 DjMaVec is being developed to seamlessly integrate into your Django ORM workflow.
