@@ -1,9 +1,12 @@
 DjMaVec: AI-Powered Vector Search for Django + MariaDB
 
+After resopnse from the Team we can publish it as a package in Pypi for easy using (pip install djmavec)
+
 DjMaVec is a next-generation Python library that integrates MariaDB’s new vector search engine directly into the Django ORM.
 It allows developers to easily add AI-powered semantic search, recommendation systems, and similarity-based queries to their Django apps — without leaving the ORM.
-
- In simple terms: DjMaVec helps Django developers bring AI intelligence to their data — using MariaDB instead of relying on external vector databases like Pinecone or PostgreSQL extensions.
+In simple terms: DjMaVec helps Django developers bring AI intelligence to their data — using MariaDB instead of relying on external vector databases like Pinecone or PostgreSQL extensions.
+ 
+YOUTUBE :
 
 Why DjMaVec?
 
