@@ -132,7 +132,7 @@ Why Django Developers Will Shift to MariaDB
 
 DjMaVec democratizes AI for Django developers — no external services, no complex setup, just MariaDB and your existing ORM.
 
-🔮 Future Roadmap
+Future Roadmap :
 
 ✅ Vector embeddings for text
 
