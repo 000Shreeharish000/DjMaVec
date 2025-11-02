@@ -149,17 +149,3 @@ Future Roadmap :
 ☁️ Cloud-ready container templates (Docker + MariaDB Vector)
 
 🏁 Vision
-
-DjMaVec transforms Django apps from data-driven → intelligence-driven.
-
-It gives every Django developer the tools to build smarter applications:
-
-Smarter search in e-commerce 
-
-Personalized recommendations 
-
-AI-powered chat and support systems 
-
-Semantic content discovery 
-
-All powered by MariaDB’s vector engine, and all inside Django’s ORM — no separate stack needed.
