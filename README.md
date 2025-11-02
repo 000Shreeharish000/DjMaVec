@@ -7,6 +7,7 @@ It allows developers to easily add AI-powered semantic search, recommendation sy
 In simple terms: DjMaVec helps Django developers bring AI intelligence to their data — using MariaDB instead of relying on external vector databases like Pinecone or PostgreSQL extensions.
  
 YOUTUBE :
+https://youtu.be/m-2XQJ-nheQ
 
 Why DjMaVec?
 
